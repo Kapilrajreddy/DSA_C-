@@ -1,0 +1,43 @@
+***********Map***********
+
+A map is a container in C++ that stores key-value pairs in a sorted order. 
+It allows efficient retrieval and insertion of elements. 
+The key is used for indexing, and each key is associated with a value.
+
+m[k]: Outputs the value associated with key k. 
+If k does not exist, a new element with that key and a default value (typically zero for primitive types) is inserted.
+
+m.insert({k, v}): Inserts the key-value pair {k, v} into the map. 
+If k already exists, the insertion does not modify the map.
+
+m.emplace(k, v): Attempts to construct the key-value pair in-place with key k and value v. 
+Similar to insert, it does not modify existing elements.
+
+m.find(k): Returns an iterator to the element with key k. 
+If k is not found, it returns an iterator to map::end.
+
+(*iter).second: Accesses the value part of the pair pointed to by iterator iter.0
+
+
+Multi Map
+A multi-map is a container in the C++ Standard Template Library (STL) 
+that allows storing key-value pairs in which keys are sorted in a specific order, 
+and multiple elements with the same key are allowed.
+
+multimap <Key_type,Value_type> map_name;
+
+
+Unordered Map
+An unordered map in C++ is a container that stores key-value pairs in an unordered manner, 
+providing fast access to values based on their keys and ensuring the uniqueness of keys. 
+This means that each key can map to a unique value.
+
+
+#include <unordered_map>
+std::unordered_map<KeyType, ValueType> myMap;
+
+
+Operation	Map	                    Multi-Map	                Unordered_Map
+insert()	O(log N)	            O(log N)	            O(1), worst case - O(N)
+emplace()	O(log N)	            O(log N)	            O(1), worst case - O(N)
+find()	  O(1),worst case-O(log n)	O(1), worst case-O(log n)	O(1), worst case - O(N)

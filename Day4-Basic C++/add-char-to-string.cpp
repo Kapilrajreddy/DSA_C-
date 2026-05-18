@@ -59,3 +59,30 @@ int main() {
 // Java (StringBuilder Usage): O(n) (since strings are immutable, StringBuilder is required).
 
 // Overall Space Complexity: O(1) for C++, O(n) for Python & Java.
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class solution {
+public:
+    string addChar(char c, string s) {
+        return c + s + c;
+    }
+};
+
+int main() {
+    char c;
+    string s;
+
+    cin >> c;
+    cin.ignore();
+    getline(cin, s);
+
+    solution sol;
+    string result = sol.addChar(c, s);
+
+    cout << result << endl;
+
+    return 0;
+}

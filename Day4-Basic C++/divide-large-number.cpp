@@ -5,11 +5,34 @@ void DivideLargeNumber(long long num1, int num2){
     cout << fixed << setprecision(2) << (double)num1 / num2 << endl;
 }
 
-int main() {
-    long long num1;
-    int num2;
-    cin>>num1>>num2;
-    DivideLargeNumber(num1,num2);
+// int main() {
+//     long long num1;
+//     int num2;
+//     cin>>num1>>num2;
+//     DivideLargeNumber(num1,num2);
+
+//     return 0;
+// }
+
+class solution{
+    public:
+        double divide(long long num,int divisor){
+            return (double)num/divisor;
+        }
+};
+
+
+int main(){
+    long long num;
+    int divisor;
+
+    cin>>num>>divisor;
+
+    solution sol;
+
+    double result = sol.divide(num,divisor);
+
+    cout<<fixed<<setprecision(2)<<result<<endl;
 
     return 0;
 }
